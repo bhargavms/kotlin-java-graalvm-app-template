@@ -1,0 +1,18 @@
+[versions]
+kotlin = "1.9.22"
+graalvm = "0.9.28"
+coroutines = "1.7.3"
+junit-jupiter = "5.10.1"
+
+[libraries]
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+kotlin-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-jupiter" }
+kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+
+[plugins]
+kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+graalvm = { id = "org.graalvm.buildtools.native", version.ref = "graalvm" }
+convention-graal = { id = "dev.mogra.gradle.graal" }
+convention-kotlin-jvm = { id = "dev.mogra.gradle.kotlin.jvm" }
